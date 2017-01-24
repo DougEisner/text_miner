@@ -1,31 +1,31 @@
-# require 'separator'
-# 
-# describe Separator do
-#   before do
-#     @s = Separator.new
-#   end
-#
-#   describe '#words' do
-#     it 'returns an Array of words' do
-#       expect(@s.words('hello')).to eq ['hello']
-#       expect(@s.words('hello world')).to eq ['hello', 'world']
-#       expect(@s.words('raggggg hammer dog')).to eq ['raggggg', 'hammer', 'dog']
-#       expect(@s.words('18-wheeler tarbox')).to eq ['18-wheeler', 'tarbox']
-#       expect(@s.words('12')).to eq nil
-#     end
-#   end
-#
-#   describe '#phone_number' do
-#     it 'returns a hash with phone number and area code' do
-#       expect(@s.phone_number('919-555-1212')).to eq({'area_code': '919', 'number': '555-1212'})
-#       expect(@s.phone_number('(919) 555-1212')).to eq({'area_code': '919', 'number': '555-1212'})
-#       expect(@s.phone_number('9195551212')).to eq({'area_code': '919', 'number': '555-1212'})
-#       expect(@s.phone_number('919.555.1212')).to eq({'area_code': '919', 'number': '555-1212'})
-#       expect(@s.phone_number('919 555-1212')).to eq({'area_code': '919', 'number': '555-1212'})
-#       expect(@s.phone_number('555-121')).to eq nil
-#     end
-#   end
-#
+require 'separator'
+
+describe Separator do
+  before do
+    @s = Separator.new
+  end
+
+  describe '#words' do
+    it 'returns an Array of words' do
+      expect(@s.words('hello')).to eq ['hello']
+      expect(@s.words('hello world')).to eq ['hello', 'world']
+      expect(@s.words('raggggg hammer dog')).to eq ['raggggg', 'hammer', 'dog']
+      expect(@s.words('18-wheeler tarbox')).to eq ['18-wheeler', 'tarbox']
+      expect(@s.words('12')).to eq nil
+    end
+  end
+
+  # describe '#phone_number' do
+  #   it 'returns a hash with phone number and area code' do
+  #     expect(@s.phone_number('919-555-1212')).to eq({'area_code': '919', 'number': '555-1212'})
+  #     expect(@s.phone_number('(919) 555-1212')).to eq({'area_code': '919', 'number': '555-1212'})
+  #     expect(@s.phone_number('9195551212')).to eq({'area_code': '919', 'number': '555-1212'})
+  #     expect(@s.phone_number('919.555.1212')).to eq({'area_code': '919', 'number': '555-1212'})
+  #     expect(@s.phone_number('919 555-1212')).to eq({'area_code': '919', 'number': '555-1212'})
+  #     expect(@s.phone_number('555-121')).to eq nil
+  #   end
+  # end
+
 #   describe '#money' do
 #     it 'returns a hash with currency symbol and amount' do
 #       expect(@s.money('$4')).to eq({'currency': '$', 'amount': 4.0})
@@ -119,4 +119,4 @@
 #       expect(@s.address('Lake Joellville, NH')).to eq nil
 #     end
 #   end
-# end
+end
